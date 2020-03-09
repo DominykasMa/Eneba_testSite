@@ -8,7 +8,7 @@ const Header = () => {
         <img className="site-logo" alt="site-logo" src={logo}></img>
         <nav className="main-nav">
           <ul>
-            <li>
+            <li className="menu-item">
               <a className="projects" href="#">Projects</a>
               <ul className="dropdown">
                 <li><a href="#">Link 1</a></li>
@@ -18,13 +18,13 @@ const Header = () => {
                 <li><a href="#">Link 5</a></li>
               </ul>
             </li>
-            <li>
+            <li className="menu-item">
               <a href="#">About Us</a>
             </li>
-            <li>
+            <li className="menu-item">
               <a href="#">Testimonials</a>
             </li>
-            <li>
+            <li className="menu-item">
               <a href="#">Contacts</a>
             </li>
           </ul>

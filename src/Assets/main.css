@@ -32,9 +32,7 @@ body {
   margin-left: auto;
   max-width: 1200px;
   padding: 10px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 20px;
+  display: flex;
 }
 
 .container {
@@ -51,20 +49,19 @@ header {
 }
 
 .main-nav {
-  display: grid;
-  align-content: flex-end;
-  justify-content: end;
-  grid-auto-flow: column;
-
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .main-nav ul {
   list-style: none;
 }
 
-.main-nav li {
-  display: inline-block;
+.menu-item {
   padding: 0px 20px;
+  display: inline-block;
 }
 
 .main-nav a:hover,
@@ -72,7 +69,7 @@ header {
   color: #EF4B74;
 }
 
-.main-nav  {
+.main-nav {
   color: #EF4B74;
 }
 
@@ -143,13 +140,15 @@ header {
 
 .main-nav ul li ul li {
   clear: both;
-  width: 100%;
+  width: 200px;
 }
 
 .site-logo {
   cursor: pointer;
   justify-content: start;
   min-width: 200px;
+  max-width: 350px;
+  flex: 1;
 }
 
 .main-content {
@@ -171,6 +170,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  justify-content: space-around;
 }
 
 .side-bar-header {
@@ -196,6 +196,7 @@ header {
   border-radius: 6px;
   padding: 20px;
   height: 100%;
+  max-height: 400px;
 }
 
 .application-form label {
@@ -235,7 +236,7 @@ textarea {
   background-image: linear-gradient(to right, rgba(215, 212, 217, 0) 0%, #d7d4d9 50%, rgba(215, 212, 217, 0) 100%);
 }
 
-.three-cols p:nth-child(2) {
+.second-col {
   padding: 0px 5px;
 }
 
@@ -260,6 +261,7 @@ textarea {
 
 .footer-nav ul {
   display: flex;
+  flex-wrap: wrap;
   color: #FFF;
 }
 
@@ -282,4 +284,43 @@ textarea {
   color: #000;
   font-size: 14px;
   padding-left: 10px;
+}
+
+
+@media only screen and (max-device-width : 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .side-bar {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 400px;
+  }
+
+  .three-cols p {
+    padding: 20px;
+  }
+
+  .menu-item {
+    display: block;
+    text-align: center;
+  }
+
+  .main-nav {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
