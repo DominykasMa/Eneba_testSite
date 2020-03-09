@@ -18,10 +18,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Quantico';
 }
 
 body {
-  font-family: 'Quantico';
   font-size: 16px;
   line-height: 1.5;
   background-color: #F0EEF3;
@@ -81,12 +81,10 @@ header {
 
 .dropdown {
   visibility: hidden;
-  opacity: 0;
   position: absolute;
-  transition: all 0.5s ease;
   margin-top: 16px;
   padding-top: 20px;
-  display: none;
+  display: block;
   background-color: #EF4B74;
   max-width: 250px;
   border-radius: 6px;
@@ -114,7 +112,7 @@ header {
   position: relative;
 }
 
-.projects::before {
+.projects::after {
   visibility: hidden;
   content: "";
   display: block;
@@ -131,11 +129,9 @@ header {
 .main-nav ul li:hover>ul,
 .main-nav ul li:focus-within>ul,
 .main-nav ul li ul:hover,
-.main-nav ul li:hover .projects::before,
-.main-nav ul li:focus-within .projects::before {
+.main-nav ul li:hover .projects::after,
+.main-nav ul li:focus-within .projects::after {
   visibility: visible;
-  opacity: 1;
-  display: block;
 }
 
 .main-nav ul li ul li {
@@ -145,7 +141,6 @@ header {
 
 .site-logo {
   cursor: pointer;
-  justify-content: start;
   min-width: 200px;
   max-width: 350px;
   flex: 1;
@@ -226,7 +221,6 @@ textarea {
   border: 1px solid #d2ccda;
   font-size: 16px;
   background-color: #ef4b74;
-  font-family: 'Quantico';
   padding: 5px 10px;
   color: #FFFFFF;
 }
